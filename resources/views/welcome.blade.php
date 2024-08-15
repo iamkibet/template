@@ -45,13 +45,6 @@
             </div>
         </div>
     </div>
-
-    <div x-data="{ open: false }">
-        <button @click="open = ! open">Toggle</button>
-
-        <div x-show="open" @click.outside="open = false">Contents...</div>
-    </div>
-
     <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
         <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
@@ -127,6 +120,4 @@
         </div>
     </div>
     </div>
-
-
 </x-guest-layout>
