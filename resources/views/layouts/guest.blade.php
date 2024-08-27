@@ -10,7 +10,7 @@ if (darkMode === 'system') {
             .matches)
     }">
 
-<head class="bg-gray-900">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -181,19 +181,23 @@ if (darkMode === 'system') {
     </nav>
 </header>
 
-<main>
-    <div class="bg-white  dark:bg-gray-900">
-        {{ $slot }}
+<main class="dark:bg-gray-900 bg-white">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+            class="py-10 min-h-screen">
+            {{ $slot }}
+        </div>
     </div>
 </main>
-<footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto bg-white dark:bg-gray-900">
-    <!-- Grid -->
+<section class="bg-white dark:bg-gray-900  ">
+    <footer class="max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 border-t  dark:border-gray-500 ">
+
     <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
         <div>
             <a class="flex-none text-xl font-semibold text-black focus:outline-none dark:text-white" href="#"
                 aria-label="Brand">Template</a>
         </div>
-        <!-- End Col -->
+   
 
         <ul class="text-center">
             <li
@@ -258,5 +262,6 @@ if (darkMode === 'system') {
     </div>
 
 </footer>
+</section>
 
 </html>
